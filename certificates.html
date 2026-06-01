@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates · Vahid Ghorbani</title>
+  <style>
+:root {
+  --bg: #f7f6f2;
+  --text: #222222;
+  --muted: #666a70;
+  --card: #ffffff;
+  --line: #dedbd2;
+  --accent: #40556f;
+  --accent-soft: #eef2f5;
+  --sand: #eee9df;
+  --shadow: 0 18px 45px rgba(30, 35, 40, 0.07);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fbfaf7 0%, var(--bg) 100%);
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+.page { max-width: 1160px; margin: 0 auto; padding: 24px 22px 64px; }
+header {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding: 14px 0 22px; border-bottom: 1px solid var(--line);
+}
+.brand { font-size: 20px; letter-spacing: -0.02em; }
+nav { display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; color: var(--muted); }
+nav a { padding: 6px 0; border-bottom: 1px solid transparent; }
+nav a:hover { border-bottom-color: var(--accent); }
+
+.hero {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) 390px;
+  gap: 34px;
+  align-items: center;
+  padding: 58px 0 44px;
+}
+.hero-photo-wrap {
+  align-self: center;
+  justify-self: start;
+}
+.profile-photo {
+  width: 185px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 36px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: white;
+}
+.eyebrow {
+  display: inline-block; padding: 7px 11px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); font-size: 13px; margin-bottom: 22px;
+}
+h1 {
+  max-width: 780px; margin: 0 0 20px; font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6.4vw, 78px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 400;
+}
+.subtitle { max-width: 650px; margin: 0; font-size: clamp(18px, 2vw, 23px); color: var(--muted); }
+.hero-panel {
+  background: rgba(255, 255, 255, 0.78); border: 1px solid var(--line);
+  border-radius: 28px; padding: 28px; box-shadow: var(--shadow);
+}
+.panel-title { color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; margin-bottom: 16px; }
+.panel-main { font-family: Georgia, "Times New Roman", serif; font-size: 29px; line-height: 1.25; margin: 0 0 14px; font-weight: 400; }
+.panel-note { color: var(--muted); margin: 0; }
+.quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.button {
+  display: inline-flex; align-items: center; border-radius: 999px; padding: 10px 14px;
+  font-size: 14px; border: 1px solid var(--line); background: white;
+}
+.button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+
+section { padding: 52px 0; border-top: 1px solid var(--line); }
+.section-layout { display: grid; grid-template-columns: 220px 1fr; gap: 42px; }
+h2 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); font-weight: 500; }
+.section-kicker p { margin: 0; color: var(--muted); font-size: 14px; }
+.lead { margin: 0 0 16px; max-width: 760px; font-family: Georgia, "Times New Roman", serif; font-size: 27px; line-height: 1.3; font-weight: 400; letter-spacing: -0.02em; }
+.muted { color: var(--muted); }
+p { margin-top: 0; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.card, .entry, .mini-card, .hobby-card {
+  background: rgba(255, 255, 255, 0.82); border: 1px solid var(--line);
+  border-radius: 22px; padding: 22px; box-shadow: 0 12px 30px rgba(30, 35, 40, 0.045);
+}
+.tag { display: inline-block; background: var(--sand); color: var(--accent); border-radius: 999px; padding: 5px 10px; font-size: 12px; margin-bottom: 14px; }
+h3 { margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: 23px; line-height: 1.2; font-weight: 400; }
+.entry { margin-bottom: 14px; }
+.entry-title { margin: 0 0 6px; font-size: 18px; line-height: 1.35; }
+.entry-meta { margin: 0; color: var(--muted); font-size: 14px; }
+.publication-link { display: inline-flex; margin-top: 8px; color: white; background: var(--accent); border-radius: 999px; padding: 11px 15px; font-size: 14px; }
+.timeline { display: grid; gap: 14px; }
+.timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: start; }
+.time { color: var(--accent); }
+.hobbies { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+.cert-image {
+  width: 100%; margin-top: 16px; border-radius: 18px; border: 1px solid var(--line);
+  object-fit: cover; box-shadow: 0 10px 25px rgba(30, 35, 40, 0.05);
+}
+.cert-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cert-card { background: rgba(255,255,255,0.84); border: 1px solid var(--line); border-radius: 22px; padding: 20px; }
+.skills { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+footer {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  padding-top: 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px;
+}
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 160px 1fr; }
+  .hero-panel { grid-column: 1 / -1; }
+  .profile-photo { width: 155px; height: 155px; }
+}
+@media (max-width: 720px) {
+  header, .hero, .section-layout, .grid, .timeline-item, .hobbies, .cert-grid { grid-template-columns: 1fr; }
+  header { align-items: flex-start; flex-direction: column; }
+  .hero { min-height: auto; padding-top: 36px; }
+  .hero-photo-wrap { justify-self: start; }
+  .page { padding-inline: 18px; }
+}
+</style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <a class="brand" href="index.html">Vahid Ghorbani</a>
+      <nav><a href="index.html">Home</a><a href="publications.html">All publications</a><a href="index.html#hobbies">Hobbies</a></nav>
+    </header>
+
+    <section>
+      <div class="section-layout">
+        <div class="section-kicker"><h2>Certificates</h2><p>Selected certificates and skills.</p></div>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <h3>Google IT Support</h3>
+            <p class="entry-meta">Google · Issued Jan 2026 · <a href="https://coursera.org/verify/professional-cert/3RYSZP145LZ4">Verify credential</a></p>
+            <p class="skills">Skills: Technical support, computer networking, operating systems, system administration, IT security.</p>
+            <a href="googlecert.jpeg"><img class="cert-image" src="googlecert.jpeg" alt="Google IT Support certificate" /></a>
+          </article>
+
+          <article class="cert-card">
+            <h3>Linear Algebra: Matrix Algebra, Determinants, & Eigenvectors</h3>
+            <p class="entry-meta">Johns Hopkins University · Issued May 2026 · <a href="https://coursera.org/verify/4WZPLOYVBLHT">Verify credential</a></p>
+            <p class="skills">Skills: Linear algebra, matrix algebra, determinants, eigenvectors, advanced mathematics.</p>
+            <a href="johnhopkinscert.jpeg"><img class="cert-image" src="johnhopkinscert.jpeg" alt="Johns Hopkins linear algebra certificate" /></a>
+          </article>
+
+          <article class="cert-card">
+            <h3>Music Composition: Starting a Piece</h3>
+            <p class="entry-meta">University of Glasgow · Issued May 2026 · <a href="https://coursera.org/verify/IPXOQE8ZRVB5">Verify credential</a></p>
+            <p class="skills">Skills: Music composition, violin, creative practice, musical structure.</p>
+            <a href="musiccomposition.jpeg"><img class="cert-image" src="musiccomposition.jpeg" alt="Music Composition certificate" /></a>
+          </article>
+
+          <article class="cert-card">
+            <h3>Adult Swimming Lessons: Water Confidence</h3>
+            <p class="entry-meta">Melbourne City Baths · City of Melbourne</p>
+            <p class="skills">Skills: treading water, streamline kick, bilateral breathing, back kick, survival backstroke, breaststroke kick.</p>
+            <a href="SwimmingCert.jpeg"><img class="cert-image" src="SwimmingCert.jpeg" alt="Water Confidence certificate from Melbourne City Baths" /></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer><div>© Vahid Ghorbani</div><div>Certificates</div></footer>
+  </main>
+</body>
+</html>
