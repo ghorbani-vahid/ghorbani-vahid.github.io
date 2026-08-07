@@ -4,425 +4,524 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vahid Ghorbani | Systems Engineer</title>
-
+  <title>Vahid Ghorbani | Quantitative ML & Systems Engineer</title>
   <meta
     name="description"
-    content="Vahid Ghorbani is a Systems Engineer and PhD Candidate at RMIT University with expertise in integrated engineering, distributed and intelligent systems, multi-sensor systems, computer engineering, and IT."
+    content="Vahid Ghorbani is a Melbourne-based quantitative ML and systems engineer, PhD candidate, and researcher working across machine learning, mathematical modelling, distributed systems, sensing, scientific computing, and applied engineering."
   />
 
   <style>
-:root {
-  --bg: #f7f6f2;
-  --text: #222222;
-  --muted: #666a70;
-  --card: #ffffff;
-  --line: #dedbd2;
-  --accent: #40556f;
-  --accent-soft: #eef2f5;
-  --sand: #eee9df;
-  --shadow: 0 18px 45px rgba(30, 35, 40, 0.07);
-}
+    :root {
+      --bg: #f7f6f2;
+      --surface: #ffffff;
+      --surface-2: #fbfaf7;
+      --text: #222222;
+      --muted: #6d7075;
+      --line: #ddd9d0;
+      --accent: #40556f;
+      --accent-2: #75879b;
+      --accent-soft: #eef2f5;
+      --sand: #eee9df;
+      --shadow: 0 14px 40px rgba(30, 35, 40, 0.07);
+      --radius: 20px;
+      --max: 1180px;
+    }
 
-* { box-sizing: border-box; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 90% 5%, rgba(64,85,111,0.06), transparent 25%),
+        linear-gradient(180deg, #fbfaf7 0%, var(--bg) 100%);
+      line-height: 1.65;
+    }
 
-body {
-  margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  color: var(--text);
-  background: linear-gradient(180deg, #fbfaf7 0%, var(--bg) 100%);
-  line-height: 1.65;
-}
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    .page {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+      padding-bottom: 60px;
+    }
 
-a:hover {
-  color: var(--accent);
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 0;
+      background: rgba(247,246,242,0.90);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(221,217,208,0.88);
+    }
 
-.page {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 24px 22px 64px;
-}
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
 
-/* ==========================
-   Header
-========================== */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--muted);
+    }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 14px 0 22px;
-  border-bottom: 1px solid var(--line);
-}
+    nav a {
+      position: relative;
+      padding: 6px 0;
+      transition: color 0.2s ease;
+    }
 
-.brand {
-  font-size: 20px;
-  letter-spacing: -0.02em;
-}
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.22s ease;
+    }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  font-size: 14px;
-  color: var(--muted);
-}
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
 
-nav a {
-  padding: 6px 0;
-  border-bottom: 1px solid transparent;
-}
+    nav a.active {
+      color: var(--accent);
+    }
 
-nav a:hover {
-  border-bottom-color: var(--accent);
-}
+    .hero {
+      min-height: 76vh;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 50px;
+      align-items: center;
+      padding: 64px 0 46px;
+    }
 
-/* ==========================
-   Hero
-========================== */
+    .profile-photo {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 34px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: white;
+    }
 
-.hero {
-  min-height: 70vh;
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 58px 0 44px;
-}
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
 
-.hero-photo-wrap {
-  align-self: center;
-  justify-self: start;
-}
+    h1 {
+      margin: 0 0 20px;
+      max-width: 900px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(44px, 6.2vw, 74px);
+      line-height: 1.03;
+      letter-spacing: -0.045em;
+      font-weight: 400;
+    }
 
-.profile-photo {
-  width: 185px;
-  height: 185px;
-  object-fit: cover;
-  border-radius: 36px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  background: white;
-}
+    .subtitle {
+      max-width: 840px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+    }
 
-.eyebrow {
-  display: inline-block;
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-size: 13px;
-  margin-bottom: 22px;
-}
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
 
-h1 {
-  max-width: 850px;
-  margin: 0 0 20px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(42px, 6.4vw, 74px);
-  line-height: 1.02;
-  letter-spacing: -0.045em;
-  font-weight: 400;
-}
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+      font-size: 14px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
 
-.subtitle {
-  max-width: 760px;
-  margin: 0;
-  font-size: clamp(18px, 2vw, 23px);
-  color: var(--muted);
-}
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(30,35,40,0.08);
+      border-color: #c9c5bc;
+    }
 
-.hero-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 26px;
-}
+    .button.primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 10px 14px;
-  font-size: 14px;
-  border: 1px solid var(--line);
-  background: white;
-}
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 26px;
+    }
 
-.button.primary {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-}
+    .fact {
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.72);
+    }
 
-/* ==========================
-   Sections
-========================== */
+    .fact strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 3px;
+    }
 
-section {
-  padding: 52px 0;
-  border-top: 1px solid var(--line);
-}
+    .fact span {
+      color: var(--muted);
+      font-size: 12px;
+    }
 
-.section-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 42px;
-}
+    section {
+      padding: 56px 0;
+      border-top: 1px solid var(--line);
+    }
 
-h2 {
-  margin: 0 0 8px;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  font-weight: 500;
-}
+    .section-layout {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 42px;
+    }
 
-.section-kicker p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
+    .section-kicker h2 {
+      margin: 0 0 8px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 500;
+    }
 
-.lead {
-  margin: 0 0 16px;
-  max-width: 820px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 27px;
-  line-height: 1.3;
-  font-weight: 400;
-  letter-spacing: -0.02em;
-}
+    .section-kicker p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-.muted {
-  color: var(--muted);
-}
+    .lead {
+      margin: 0 0 16px;
+      max-width: 900px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      line-height: 1.3;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
 
-p {
-  margin-top: 0;
-}
+    .muted { color: var(--muted); }
+    p { margin-top: 0; }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
 
-.card,
-.entry,
-.mini-card,
-.hobby-card {
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 22px;
-  box-shadow: 0 12px 30px rgba(30, 35, 40, 0.045);
-}
+    .card,
+    .entry,
+    .mini-card,
+    .skill-row {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 30px rgba(30,35,40,0.045);
+    }
 
-.tag {
-  display: inline-block;
-  background: var(--sand);
-  color: var(--accent);
-  border-radius: 999px;
-  padding: 5px 10px;
-  font-size: 12px;
-  margin-bottom: 14px;
-}
+    .card {
+      padding: 22px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-h3 {
-  margin: 0 0 8px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
-  line-height: 1.2;
-  font-weight: 400;
-}
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 36px rgba(30,35,40,0.075);
+    }
 
-.entry {
-  margin-bottom: 14px;
-}
+    .tag {
+      display: inline-block;
+      background: var(--sand);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
 
-.entry-title {
-  margin: 0 0 6px;
-  font-size: 18px;
-  line-height: 1.35;
-}
+    h3 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      line-height: 1.2;
+      font-weight: 400;
+    }
 
-.entry-meta {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
 
-.publication-link {
-  display: inline-flex;
-  margin-top: 8px;
-  color: white;
-  background: var(--accent);
-  border-radius: 999px;
-  padding: 11px 15px;
-  font-size: 14px;
-}
+    .filter-btn {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.18s ease;
+    }
 
-/* ==========================
-   Experience / Timeline
-========================== */
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: white;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
 
-.timeline {
-  display: grid;
-  gap: 14px;
-}
+    .skill-list {
+      display: grid;
+      gap: 12px;
+    }
 
-.timeline-item {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 18px;
-  align-items: start;
-}
+    .skill-row {
+      padding: 18px 20px;
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
 
-.time {
-  color: var(--accent);
-}
+    .skill-row strong {
+      display: block;
+      margin-bottom: 5px;
+    }
 
-/* ==========================
-   Skills
-========================== */
+    .skills {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-.skill-list {
-  display: grid;
-  gap: 14px;
-}
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
 
-.skill-row {
-  background: rgba(255,255,255,0.82);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 18px 20px;
-}
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 18px;
+      padding: 20px;
+    }
 
-.skill-row strong {
-  display: block;
-  margin-bottom: 5px;
-}
+    .time {
+      color: var(--accent);
+      font-size: 14px;
+    }
 
-.skills {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 0;
-}
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
 
-/* ==========================
-   Hobbies
-========================== */
+    .chip {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+    }
 
-.hobbies {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: stretch;
-}
+    .entry {
+      padding: 20px;
+      margin-bottom: 12px;
+    }
 
-/* ==========================
-   Footer
-========================== */
+    .entry-title {
+      margin: 0 0 6px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  padding-top: 30px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 14px;
-}
+    .entry-meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-/* ==========================
-   Responsive
-========================== */
+    .publication-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: white;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+    }
 
-@media (max-width: 980px) {
-  .hero {
-    grid-template-columns: 160px 1fr;
-  }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
 
-  .profile-photo {
-    width: 155px;
-    height: 155px;
-  }
-}
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
-@media (max-width: 720px) {
-  header,
-  .hero,
-  .section-layout,
-  .grid,
-  .timeline-item,
-  .hobbies {
-    grid-template-columns: 1fr;
-  }
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0;
+      background: var(--accent);
+      z-index: 100;
+    }
 
-  header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+    .back-to-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.92);
+      color: var(--accent);
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: 0.2s ease;
+    }
 
-  .hero {
-    min-height: auto;
-    padding-top: 36px;
-  }
+    .back-to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: none;
+    }
 
-  .hero-photo-wrap {
-    justify-self: start;
-  }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
 
-  .page {
-    padding-inline: 18px;
-  }
-}
+    @media (max-width: 920px) {
+      .hero {
+        grid-template-columns: 170px 1fr;
+      }
+
+      .profile-photo {
+        width: 155px;
+        height: 155px;
+      }
+
+      .quick-facts {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      header {
+        position: static;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero,
+      .section-layout,
+      .grid,
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 38px;
+      }
+
+      .profile-photo {
+        width: 145px;
+        height: 145px;
+      }
+    }
+
+    @media (max-width: 470px) {
+      .quick-facts {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
 <body>
+<div class="scroll-progress" id="scrollProgress"></div>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <main class="page">
 
-  <!-- ==========================
-       Header
-  ========================== -->
-
   <header>
-    <a class="brand" href="index.html">Vahid Ghorbani</a>
-
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a>
+    <a class="brand" href="#home">Vahid Ghorbani</a>
+    <nav aria-label="Main navigation" id="mainNav">
+      <a href="#about">Profile</a>
       <a href="#expertise">Expertise</a>
+      <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a href="#research">Research</a>
-      <a href="#papers">Papers</a>
+      <a href="#research">Work</a>
+      <a href="#papers">Research</a>
       <a href="#education">Education</a>
-      <a href="publications.html">All Publications</a>
-      <a href="certificates.html">Certificates</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-
-  <!-- ==========================
-       Hero
-  ========================== -->
-
   <section class="hero" id="home">
-
-    <div class="hero-photo-wrap">
+    <div>
       <img
         class="profile-photo"
         src="profile_in_size.jpg"
@@ -431,612 +530,513 @@ footer {
     </div>
 
     <div>
-
-      <div class="eyebrow">
-        Systems Engineer · PhD Candidate · RMIT University
-      </div>
+      <div class="eyebrow">Quantitative ML · Engineering · Applied Research</div>
 
       <h1>
-        Systems Engineering for Distributed and Intelligent Systems
+        Building intelligent systems from mathematics, data, and engineering.
       </h1>
 
       <p class="subtitle">
-        Systems Engineer with a multidisciplinary background in Integrated
-        Engineering, Computer Engineering, and Information Technology,
-        specialising in distributed, multi-sensor, intelligent, and resilient
-        engineering systems.
+        I work across machine learning, probabilistic modelling, scientific
+        computing, distributed systems, sensing, and applied engineering.
+        My focus is solving difficult real-world problems by combining rigorous
+        quantitative reasoning with hands-on implementation and experimentation.
       </p>
 
       <div class="hero-links">
-        <a class="button primary" href="#about">About Me</a>
+        <a class="button primary" href="#experience">View Experience</a>
+        <a class="button" href="#research">Selected Work</a>
         <a class="button" href="publications.html">Publications</a>
-        <a class="button" href="certificates.html">Certificates</a>
         <a class="button" href="mailto:vahidg38@gmail.com">Contact</a>
       </div>
 
+      <div class="quick-facts">
+        <div class="fact">
+          <strong>ML + Math</strong>
+          <span>Probabilistic modelling, deep learning, estimation</span>
+        </div>
+        <div class="fact">
+          <strong>Scientific Python</strong>
+          <span>Analysis, simulation, modelling, automation</span>
+        </div>
+        <div class="fact">
+          <strong>Real Systems</strong>
+          <span>Sensing, distributed systems, environmental data</span>
+        </div>
+        <div class="fact">
+          <strong>Research → Practice</strong>
+          <span>From formulation to implementation and evaluation</span>
+        </div>
+      </div>
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       About
-  ========================== -->
-
-  <section id="about">
-
+  <section id="about" class="reveal">
     <div class="section-layout">
-
       <div class="section-kicker">
-        <h2>About</h2>
-        <p>Professional profile.</p>
+        <h2>Profile</h2>
+        <p>How I work.</p>
       </div>
 
       <div>
-
         <p class="lead">
-          I work at the intersection of systems engineering, distributed
-          systems, intelligent sensing, and computer engineering.
+          I am a quantitative engineer and researcher who enjoys turning
+          ambiguous technical problems into models, experiments, software,
+          and measurable results.
         </p>
 
         <p class="muted">
-          I am a Systems Engineer with a multidisciplinary background in
-          Integrated Engineering, Computer Engineering, and Information
-          Technology. My experience spans systems engineering, distributed and
-          intelligent systems, sensing, data analytics, machine learning, and
-          engineering research.
+          My background spans Computer Engineering, Integrated Engineering,
+          machine learning, mathematical modelling, distributed sensing, data
+          analytics, and scientific research. I am particularly interested in
+          problems where data are noisy, incomplete, uncertain, or difficult to
+          interpret, and where strong reasoning matters as much as model scale.
         </p>
 
         <p class="muted">
-          During my postgraduate studies in South Korea, I contributed to
-          multidisciplinary research and engineering projects involving
-          environmental sensing, data acquisition, databases, machine learning,
-          monitoring systems, and system-level integration.
+          Across research and applied projects, I have worked with real sensor
+          data, machine-learning systems, Bayesian estimation, anomaly detection,
+          data validation, environmental monitoring, multi-object tracking, and
+          distributed inference. I value solutions that are technically sound,
+          testable, reproducible, and useful outside a purely academic setting.
         </p>
-
-        <p class="muted">
-          I am currently a PhD Candidate in Engineering at RMIT University,
-          where my research focuses on robust distributed multi-object tracking
-          and multi-sensor systems, with particular emphasis on reliability,
-          resilience, distributed estimation, and intelligent networked systems.
-        </p>
-
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       Expertise
-  ========================== -->
-
-  <section id="expertise">
-
+  <section id="expertise" class="reveal">
     <div class="section-layout">
-
       <div class="section-kicker">
         <h2>Expertise</h2>
-        <p>Engineering and technical focus.</p>
+        <p>Core technical areas.</p>
       </div>
 
       <div class="grid">
-
         <article class="card">
-          <span class="tag">Systems</span>
-          <h3>Systems Engineering</h3>
+          <span class="tag">Machine Learning</span>
+          <h3>ML, Deep Learning & Anomaly Detection</h3>
           <p class="muted">
-            Requirements engineering, system context, functional analysis,
-            Concept of Operations, V-Lifecycle, system integration, reliability,
-            and structured engineering problem solving.
+            Deep learning, autoencoders, computer vision, anomaly detection,
+            data imputation, representation learning, evaluation, and robust
+            intelligent systems.
           </p>
         </article>
 
         <article class="card">
-          <span class="tag">Distributed</span>
-          <h3>Distributed & Multi-Sensor Systems</h3>
+          <span class="tag">Mathematics</span>
+          <h3>Probabilistic & Statistical Modelling</h3>
           <p class="muted">
-            Distributed sensing, sensor fusion, networked systems, real-time
-            processing, distributed estimation, and reliable multi-sensor
-            architectures.
+            Bayesian inference, state estimation, stochastic modelling, signal
+            processing, uncertainty reasoning, simulation, and quantitative
+            performance analysis.
           </p>
         </article>
 
         <article class="card">
-          <span class="tag">Intelligent Systems</span>
-          <h3>AI & Data-Driven Engineering</h3>
+          <span class="tag">Applied Engineering</span>
+          <h3>Real-World Data & Systems</h3>
           <p class="muted">
-            Machine learning, deep learning, computer vision, anomaly detection,
-            data analytics, and intelligent monitoring systems.
+            Environmental sensing, multi-sensor systems, data quality,
+            measurement reliability, real-time processing, system integration,
+            and applied engineering analytics.
           </p>
         </article>
 
         <article class="card">
-          <span class="tag">Estimation</span>
-          <h3>Bayesian Estimation & Tracking</h3>
+          <span class="tag">Software</span>
+          <h3>Scientific & Engineering Computing</h3>
           <p class="muted">
-            Bayesian filtering, state estimation, signal processing,
-            multi-object tracking, random finite set methods, and uncertainty-aware
-            engineering systems.
+            Python-based experimentation and analysis, MATLAB modelling,
+            research software, Linux workflows, Git, Docker, and implementation
+            of custom algorithms for non-standard technical problems.
           </p>
         </article>
-
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       Technical Skills
-  ========================== -->
-
-  <section id="skills">
-
+  <section id="skills" class="reveal">
     <div class="section-layout">
-
       <div class="section-kicker">
-        <h2>Technical Skills</h2>
-        <p>Core technical toolkit.</p>
+        <h2>Technical Stack</h2>
+        <p>Hands-on tools and methods.</p>
       </div>
 
-      <div class="skill-list">
-
-        <div class="skill-row">
-          <strong>Programming & Data</strong>
-          <p class="skills">
-            Python · C++ · SQL · MATLAB · R
-          </p>
+      <div>
+        <div class="filters" id="skillFilters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="code">Programming</button>
+          <button class="filter-btn" data-filter="ml">ML / AI</button>
+          <button class="filter-btn" data-filter="math">Math</button>
+          <button class="filter-btn" data-filter="systems">Systems</button>
         </div>
 
-        <div class="skill-row">
-          <strong>Systems & Computing</strong>
-          <p class="skills">
-            Linux · Distributed Systems · Real-Time Data Processing ·
-            Sensor Fusion · System Integration
-          </p>
-        </div>
+        <div class="skill-list">
+          <div class="skill-row" data-category="code">
+            <strong>Programming & Scientific Computing</strong>
+            <p class="skills">
+              Python · C++ · MATLAB · R · SQL · NumPy · Pandas · SciPy · Matplotlib
+            </p>
+          </div>
 
-        <div class="skill-row">
-          <strong>Networking & IT</strong>
-          <p class="skills">
-            TCP/IP · UDP · DNS · DHCP · Network Troubleshooting ·
-            IT Support
-          </p>
-        </div>
+          <div class="skill-row" data-category="ml">
+            <strong>Machine Learning & AI</strong>
+            <p class="skills">
+              PyTorch · Deep Learning · Autoencoders · Computer Vision ·
+              Anomaly Detection · Data Imputation · Model Evaluation
+            </p>
+          </div>
 
-        <div class="skill-row">
-          <strong>Software & Tools</strong>
-          <p class="skills">
-            Git · Docker · PyTorch
-          </p>
-        </div>
+          <div class="skill-row" data-category="math">
+            <strong>Mathematics & Quantitative Methods</strong>
+            <p class="skills">
+              Bayesian Inference · Probabilistic Modelling · State Estimation ·
+              Signal Processing · Data Assimilation · Uncertainty Modelling ·
+              Simulation
+            </p>
+          </div>
 
-        <div class="skill-row">
-          <strong>AI & Computational Methods</strong>
-          <p class="skills">
-            Machine Learning · Deep Learning · Computer Vision ·
-            Anomaly Detection · Bayesian Filtering · State Estimation ·
-            Signal Processing
-          </p>
-        </div>
+          <div class="skill-row" data-category="systems">
+            <strong>Systems & Engineering</strong>
+            <p class="skills">
+              Distributed Systems · Multi-Sensor Systems · Sensor Fusion ·
+              Real-Time Data Processing · System Integration · Requirements &
+              Functional Analysis
+            </p>
+          </div>
 
+          <div class="skill-row" data-category="systems code">
+            <strong>Engineering Tools & Platforms</strong>
+            <p class="skills">
+              Linux · Git · Docker · Networking Fundamentals · Data Pipelines ·
+              Reproducible Research Workflows
+            </p>
+          </div>
+        </div>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       Experience
-  ========================== -->
-
-  <section id="experience">
-
+  <section id="experience" class="reveal">
     <div class="section-layout">
-
       <div class="section-kicker">
         <h2>Experience</h2>
-        <p>Research, engineering, and teaching.</p>
+        <p>Research and applied engineering.</p>
       </div>
 
       <div class="timeline">
-
         <article class="mini-card timeline-item">
-
           <div class="time">2024 · Present</div>
-
           <div>
             <h3>PhD Researcher — RMIT University</h3>
-
             <p class="muted">
-              Researching robust and resilient distributed multi-sensor systems
-              for multi-object tracking in networked sensing environments.
-              My work combines systems engineering, distributed estimation,
-              sensor fusion, Bayesian inference, signal processing, and
-              intelligent anomaly-detection methods.
+              Develop mathematical and computational methods for reliable
+              multi-object tracking and distributed sensing under noisy,
+              incomplete, and adversarial observations. Work combines Bayesian
+              inference, signal processing, anomaly detection, simulation,
+              scientific programming, and quantitative evaluation.
             </p>
+            <div class="stack">
+              <span class="chip">Python</span>
+              <span class="chip">MATLAB</span>
+              <span class="chip">Bayesian Estimation</span>
+              <span class="chip">Signal Processing</span>
+              <span class="chip">Distributed Systems</span>
+            </div>
           </div>
-
         </article>
 
-
         <article class="mini-card timeline-item">
-
           <div class="time">2026 · Present</div>
-
           <div>
             <h3>Tutor — Systems Engineering Principles</h3>
-
             <p class="muted">
-              Supporting engineering students at RMIT University in structured
-              systems engineering methodologies, including stakeholder and user
-              needs, requirements engineering, system context, functional
-              analysis, Concept of Operations (ConOps), and the Systems
-              Engineering V-Lifecycle.
+              Support engineering students in structured problem formulation,
+              requirements, functional decomposition, system context, ConOps,
+              system lifecycle thinking, and translating stakeholder needs into
+              technical system definitions.
             </p>
           </div>
-
         </article>
-
 
         <article class="mini-card timeline-item">
-
           <div class="time">South Korea</div>
-
           <div>
-            <h3>Research & Engineering Projects</h3>
-
+            <h3>Applied Research & Engineering Projects</h3>
             <p class="muted">
-              Contributed to multidisciplinary projects involving environmental
-              sensing, data acquisition, databases, machine learning, indoor-air
-              quality monitoring, data validation, prediction, and intelligent
-              engineering systems.
+              Worked on multidisciplinary projects involving subway indoor-air
+              quality, environmental sensing, data acquisition, databases,
+              machine learning, missing-data reconstruction, data validation,
+              prediction, and real-world monitoring systems.
             </p>
+            <div class="stack">
+              <span class="chip">Real Sensor Data</span>
+              <span class="chip">Machine Learning</span>
+              <span class="chip">Data Quality</span>
+              <span class="chip">Environmental Monitoring</span>
+              <span class="chip">Research Software</span>
+            </div>
           </div>
-
         </article>
-
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       Research
-  ========================== -->
-
-  <section id="research">
-
+  <section id="research" class="reveal">
     <div class="section-layout">
-
       <div class="section-kicker">
-        <h2>Research</h2>
-        <p>Current specialisation.</p>
+        <h2>Selected Work</h2>
+        <p>Problems I have worked on.</p>
       </div>
 
       <div class="grid">
-
-        <article class="card">
-          <span class="tag">Tracking</span>
-          <h3>Multi-Object Tracking</h3>
-          <p class="muted">
-            Reliable tracking in complex sensing environments involving clutter,
-            missed detections, incomplete observations, and uncertain measurements.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="tag">Distributed Systems</span>
-          <h3>Distributed Estimation</h3>
-          <p class="muted">
-            Cooperation between networked sensing nodes for scalable,
-            decentralised estimation and decision making.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="tag">Reliability</span>
-          <h3>Resilient Engineering Systems</h3>
-          <p class="muted">
-            Designing intelligent systems capable of maintaining reliable
-            operation under faults, measurement degradation, attacks, and
-            incomplete information.
-          </p>
-        </article>
-
         <article class="card">
           <span class="tag">Inference</span>
-          <h3>Bayesian & RFS Methods</h3>
+          <h3>Robust Estimation from Unreliable Measurements</h3>
           <p class="muted">
-            Bayesian filtering, random finite set theory, uncertainty modelling,
-            state estimation, and multi-object inference.
+            Designed methods for extracting reliable state information when
+            observations can be noisy, misleading, incomplete, or corrupted.
+            This work connects mathematical modelling, uncertainty, and robust
+            decision making.
           </p>
         </article>
 
+        <article class="card">
+          <span class="tag">Data Quality</span>
+          <h3>Missing-Data Reconstruction</h3>
+          <p class="muted">
+            Evaluated deep-learning approaches for reconstructing missing
+            subway environmental measurements, considering not only prediction
+            accuracy but also efficiency and downstream analytical impact.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="tag">ML Systems</span>
+          <h3>Data Validation & Anomaly Detection</h3>
+          <p class="muted">
+            Developed learning-based methods for identifying measurements that
+            deviate from expected behaviour in real environmental datasets,
+            with emphasis on practical data reliability.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="tag">Distributed AI</span>
+          <h3>Multi-Sensor Tracking & Cooperative Inference</h3>
+          <p class="muted">
+            Research on distributed multi-object tracking, sensor cooperation,
+            resilient inference, and maintaining reliable estimates across
+            networked sensing nodes.
+          </p>
+        </article>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       Publications
-  ========================== -->
-
-  <section id="papers">
-
+  <section id="papers" class="reveal">
     <div class="section-layout">
-
       <div class="section-kicker">
-        <h2>Recent Papers</h2>
-        <p>Selected first-author work.</p>
+        <h2>Selected Research</h2>
+        <p>Representative publications.</p>
       </div>
 
       <div>
-
         <article class="entry">
           <p class="entry-title">
             Robust Filtering for Multi-Object Tracking Against Stealthy
             Measurement-Oriented Adversarial Attacks
           </p>
-
           <p class="entry-meta">
             IEEE Transactions on Signal Processing, 2026 ·
             <a href="https://doi.org/10.1109/TSP.2026.3697369">DOI</a>
           </p>
         </article>
 
-
         <article class="entry">
           <p class="entry-title">
             Real-Time Intrusion Detection of Ghost Attacks in Distributed
             Multi-Object Tracking Without Offline Pre-Training
           </p>
-
           <p class="entry-meta">
-            14th International Conference on Control, Automation and Information
-            Sciences (ICCAIS), 2025 ·
+            ICCAIS, 2025 ·
             <a href="https://doi.org/10.1109/ICCAIS67508.2025.11262123">DOI</a>
           </p>
         </article>
-
 
         <article class="entry">
           <p class="entry-title">
             Evaluating Deep Learning Data Imputation for Subway Indoor Air
             Quality: Accuracy, Efficiency, and Implications for Downstream Tasks
           </p>
-
           <p class="entry-meta">
             Building and Environment, 2025 ·
             <a href="https://doi.org/10.1016/j.buildenv.2025.113713">DOI</a>
           </p>
         </article>
 
-
         <article class="entry">
           <p class="entry-title">
             Validation of Subway Indoor Air Quality Data Using
             Memory-Augmented Autoencoders with Learned Normal Prototypes
           </p>
-
           <p class="entry-meta">
             Korean Journal of Chemical Engineering, 2025
           </p>
         </article>
 
-
-        <a class="publication-link" href="publications.html">
-          View all publications
-        </a>
-
+        <a class="publication-link" href="publications.html">View all publications</a>
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       Education
-  ========================== -->
-
-  <section id="education">
-
+  <section id="education" class="reveal">
     <div class="section-layout">
-
       <div class="section-kicker">
         <h2>Education</h2>
-        <p>Multidisciplinary engineering background.</p>
+        <p>Engineering and computing foundation.</p>
       </div>
 
       <div class="timeline">
-
         <article class="mini-card timeline-item">
           <div class="time">2024 · Present</div>
           <div>
             <h3>PhD in Engineering</h3>
-            <p class="muted">
-              RMIT University · Melbourne, Australia
-            </p>
+            <p class="muted">RMIT University · Melbourne, Australia</p>
           </div>
         </article>
-
 
         <article class="mini-card timeline-item">
           <div class="time">Completed</div>
           <div>
             <h3>Master of Engineering — Integrated Engineering</h3>
-            <p class="muted">
-              Kyung Hee University · South Korea
-            </p>
+            <p class="muted">Kyung Hee University · South Korea</p>
           </div>
         </article>
-
 
         <article class="mini-card timeline-item">
           <div class="time">Completed</div>
           <div>
             <h3>B.Sc. in Computer Engineering — Information Technology</h3>
-            <p class="muted">
-              Amirkabir University of Technology · Iran
-            </p>
+            <p class="muted">Amirkabir University of Technology · Iran</p>
           </div>
         </article>
-
       </div>
-
     </div>
-
   </section>
 
-
-  <!-- ==========================
-       Certification
-  ========================== -->
-
-  <section id="certification">
-
+  <section id="contact" class="reveal">
     <div class="section-layout">
-
-      <div class="section-kicker">
-        <h2>Certification</h2>
-        <p>Professional development.</p>
-      </div>
-
-      <div>
-
-        <article class="mini-card">
-          <span class="tag">IT</span>
-
-          <h3>Google IT Support Professional Certificate</h3>
-
-          <p class="muted">
-            Professional training in computer systems, networking,
-            operating systems, troubleshooting, system administration,
-            and IT infrastructure.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==========================
-       Hobbies
-  ========================== -->
-
-  <section id="hobbies">
-
-    <div class="section-layout">
-
-      <div class="section-kicker">
-        <h2>Outside Engineering</h2>
-        <p>Personal interests.</p>
-      </div>
-
-      <div class="hobbies">
-
-        <article class="hobby-card">
-
-          <span class="tag">Music</span>
-
-          <h3>Violin & Music</h3>
-
-          <p class="muted">
-            I enjoy learning the violin and exploring the creative process
-            behind music and composition.
-          </p>
-
-        </article>
-
-
-        <article class="hobby-card">
-
-          <span class="tag">Swimming</span>
-
-          <h3>Swimming</h3>
-
-          <p class="muted">
-            Swimming is one of my regular recreational interests and a way
-            to stay active outside engineering and research.
-          </p>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ==========================
-       Contact
-  ========================== -->
-
-  <section id="contact">
-
-    <div class="section-layout">
-
       <div class="section-kicker">
         <h2>Contact</h2>
-        <p>Engineering, research, and collaboration.</p>
+        <p>Engineering, ML, research, and technical opportunities.</p>
       </div>
 
       <div>
-
         <p class="lead">
-          Feel free to contact me about engineering opportunities,
-          systems research, technical projects, or collaborations.
+          Interested in quantitative engineering, machine learning, scientific
+          computing, intelligent systems, and challenging applied problems.
         </p>
 
-        <p>
-          <a href="mailto:vahidg38@gmail.com">Email</a>
-        </p>
-
-        <p>
-          <a href="https://www.linkedin.com/in/vahid-ghorbani/">LinkedIn</a>
-        </p>
-
-        <p>
-          <a href="https://github.com/ghorbani-vahid">GitHub</a>
-        </p>
-
-        <p>
-          <a href="https://scholar.google.com/citations?user=rwPMpXIAAAAJ&hl=en">
-            Google Scholar
-          </a>
-        </p>
-
+        <div class="hero-links">
+          <a class="button primary" href="mailto:vahidg38@gmail.com">Email</a>
+          <a class="button" href="https://www.linkedin.com/in/vahid-ghorbani/">LinkedIn</a>
+          <a class="button" href="https://github.com/ghorbani-vahid">GitHub</a>
+          <a class="button" href="https://scholar.google.com/citations?user=rwPMpXIAAAAJ&hl=en">Google Scholar</a>
+        </div>
       </div>
-
     </div>
-
   </section>
-
-
-  <!-- ==========================
-       Footer
-  ========================== -->
 
   <footer>
     <div>© Vahid Ghorbani</div>
-    <div>Systems Engineering · Research · Technology</div>
+    <div>Machine Learning · Mathematics · Systems · Engineering</div>
   </footer>
 
 </main>
 
+<script>
+  // Reveal sections as they enter the viewport
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Active navigation item based on visible section
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('#mainNav a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle(
+            'active',
+            link.getAttribute('href') === '#' + entry.target.id
+          );
+        });
+      }
+    });
+  }, {
+    rootMargin: '-35% 0px -55% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(section => sectionObserver.observe(section));
+
+  // Scroll progress bar + back to top
+  const progress = document.getElementById('scrollProgress');
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    progress.style.width = pct + '%';
+    backToTop.classList.toggle('show', scrollTop > 500);
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Filter technical skills
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const skillRows = document.querySelectorAll('.skill-row');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      skillRows.forEach(row => {
+        const categories = row.dataset.category.split(' ');
+        const match = filter === 'all' || categories.includes(filter);
+
+        row.style.display = match ? 'block' : 'none';
+        if (match) {
+          row.animate(
+            [
+              { opacity: 0, transform: 'translateY(6px)' },
+              { opacity: 1, transform: 'translateY(0)' }
+            ],
+            { duration: 220, easing: 'ease-out' }
+          );
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
-
