@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vahid Ghorbani | Quantitative ML & Systems Engineer</title>
+  <title>Vahid Ghorbani | Research Engineer & Machine Learning Engineer</title>
   <meta
     name="description"
-    content="Vahid Ghorbani is a Melbourne-based quantitative ML and systems engineer, PhD candidate, and researcher working across machine learning, mathematical modelling, distributed systems, sensing, scientific computing, and applied engineering."
+    content="Vahid Ghorbani is a Melbourne-based PhD researcher and engineer working across machine learning, computer vision, multi-object tracking, probabilistic estimation, scientific computing, and robust intelligent systems."
   />
 
   <style>
@@ -95,16 +95,12 @@
     }
 
     nav a:hover::after,
-    nav a.active::after {
-      width: 100%;
-    }
+    nav a.active::after { width: 100%; }
 
-    nav a.active {
-      color: var(--accent);
-    }
+    nav a.active { color: var(--accent); }
 
     .hero {
-      min-height: 76vh;
+      min-height: 74vh;
       display: grid;
       grid-template-columns: 220px 1fr;
       gap: 50px;
@@ -133,22 +129,28 @@
     }
 
     h1 {
-      margin: 0 0 20px;
-      max-width: 900px;
+      margin: 0 0 16px;
+      max-width: 920px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(44px, 6.2vw, 74px);
+      font-size: clamp(43px, 6vw, 72px);
       line-height: 1.03;
       letter-spacing: -0.045em;
       font-weight: 400;
     }
 
-    .subtitle {
-      max-width: 840px;
-      margin: 0;
-      color: var(--muted);
+    .hero-role {
+      margin: 0 0 16px;
+      color: var(--accent);
       font-size: clamp(18px, 2vw, 22px);
+      font-weight: 600;
     }
 
+    .subtitle {
+      max-width: 850px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(17px, 1.8vw, 20px);
+    }
     .hero-links {
       display: flex;
       flex-wrap: wrap;
@@ -290,6 +292,15 @@
       font-weight: 400;
     }
 
+    .evidence {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .evidence li { margin: 6px 0; }
+
     .filters {
       display: flex;
       flex-wrap: wrap;
@@ -343,7 +354,7 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 130px 1fr;
+      grid-template-columns: 140px 1fr;
       gap: 18px;
       padding: 20px;
     }
@@ -453,18 +464,9 @@
     }
 
     @media (max-width: 920px) {
-      .hero {
-        grid-template-columns: 170px 1fr;
-      }
-
-      .profile-photo {
-        width: 155px;
-        height: 155px;
-      }
-
-      .quick-facts {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
+      .hero { grid-template-columns: 170px 1fr; }
+      .profile-photo { width: 155px; height: 155px; }
+      .quick-facts { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
 
     @media (max-width: 720px) {
@@ -493,9 +495,7 @@
     }
 
     @media (max-width: 470px) {
-      .quick-facts {
-        grid-template-columns: 1fr;
-      }
+      .quick-facts { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -509,16 +509,26 @@
   <header>
     <a class="brand" href="#home">Vahid Ghorbani</a>
     <nav aria-label="Main navigation" id="mainNav">
-      <a href="#about">Profile</a>
-      <a href="#expertise">Expertise</a>
+      <a href="#profile">Profile</a>
+      <a href="#offer">What I Offer</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a href="#research">Work</a>
+      <a href="#work">Selected Work</a>
       <a href="#papers">Research</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
+
+  <!-- =========================================================
+       JOB-TAILORING BLOCK
+       For a targeted application, update:
+       1) eyebrow
+       2) hero-role
+       3) first sentence of subtitle
+       4) first 3 cards in "What I Offer"
+       5) ordering of skills so it mirrors the job description
+       ========================================================= -->
 
   <section class="hero" id="home">
     <div>
@@ -530,126 +540,142 @@
     </div>
 
     <div>
-      <div class="eyebrow">Quantitative ML · Engineering · Applied Research</div>
+      <div class="eyebrow">Melbourne · Research Engineering · Machine Learning · Computer Vision</div>
 
-      <h1>
-        Building intelligent systems from mathematics, data, and engineering.
-      </h1>
+      <h1>Vahid Ghorbani</h1>
 
-      <p class="subtitle">
-        I work across machine learning, probabilistic modelling, scientific
-        computing, distributed systems, sensing, and applied engineering.
-        My focus is solving difficult real-world problems by combining rigorous
-        quantitative reasoning with hands-on implementation and experimentation.
+      <p class="hero-role">
+        Research Engineer / Machine Learning Engineer
       </p>
 
+      <p class="subtitle">
+        PhD researcher and engineer developing robust, data-driven methods for
+        machine learning, multi-object tracking, computer vision, sensor fusion,
+        probabilistic estimation, and scientific computing. I combine mathematical
+        modelling with practical implementation to solve complex engineering problems.
+      </p>
       <div class="hero-links">
         <a class="button primary" href="#experience">View Experience</a>
-        <a class="button" href="#research">Selected Work</a>
+        <a class="button" href="#work">Selected Work</a>
         <a class="button" href="publications.html">Publications</a>
+        <a class="button" href="Vahid_Ghorbani_CV_RMIT.pdf">Resume</a>
         <a class="button" href="mailto:vahidg38@gmail.com">Contact</a>
       </div>
 
       <div class="quick-facts">
         <div class="fact">
-          <strong>ML + Math</strong>
-          <span>Probabilistic modelling, deep learning, estimation</span>
+          <strong>Machine Learning</strong>
+          <span>Deep learning, anomaly detection, computer vision</span>
         </div>
         <div class="fact">
-          <strong>Scientific Python</strong>
-          <span>Analysis, simulation, modelling, automation</span>
+          <strong>Estimation & Tracking</strong>
+          <span>Bayesian estimation, sensor fusion, multi-object tracking</span>
         </div>
         <div class="fact">
-          <strong>Real Systems</strong>
-          <span>Sensing, distributed systems, environmental data</span>
+          <strong>Scientific Software</strong>
+          <span>Python, C++, MATLAB, SQL, Linux, Docker, Git</span>
         </div>
         <div class="fact">
-          <strong>Research → Practice</strong>
-          <span>From formulation to implementation and evaluation</span>
+          <strong>Research to Practice</strong>
+          <span>Problem formulation, implementation, evaluation, publication</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="reveal">
+  <section id="profile" class="reveal">
     <div class="section-layout">
       <div class="section-kicker">
         <h2>Profile</h2>
-        <p>How I work.</p>
+        <p>Professional summary.</p>
       </div>
 
       <div>
         <p class="lead">
-          I am a quantitative engineer and researcher who enjoys turning
-          ambiguous technical problems into models, experiments, software,
-          and measurable results.
+          I turn technically difficult problems into models, algorithms, software,
+          experiments, and measurable results.
         </p>
 
         <p class="muted">
-          My background spans Computer Engineering, Integrated Engineering,
-          machine learning, mathematical modelling, distributed sensing, data
-          analytics, and scientific research. I am particularly interested in
-          problems where data are noisy, incomplete, uncertain, or difficult to
-          interpret, and where strong reasoning matters as much as model scale.
+          My background spans Computer Engineering, Integrated Engineering, machine
+          learning, mathematical modelling, distributed sensing, robotics, computer
+          vision, and scientific research. I am particularly interested in systems
+          where measurements are uncertain, incomplete, noisy, or adversarial, and
+          where reliable decision-making matters.
         </p>
 
         <p class="muted">
-          Across research and applied projects, I have worked with real sensor
-          data, machine-learning systems, Bayesian estimation, anomaly detection,
-          data validation, environmental monitoring, multi-object tracking, and
-          distributed inference. I value solutions that are technically sound,
-          testable, reproducible, and useful outside a purely academic setting.
+          My work includes robust filtering, intrusion detection, multi-object
+          tracking, re-identification, environmental sensing, missing-data
+          reconstruction, anomaly detection, and research software development. I
+          value solutions that are technically sound, reproducible, testable, and
+          useful beyond a purely academic setting.
         </p>
       </div>
     </div>
   </section>
 
-  <section id="expertise" class="reveal">
+  <section id="offer" class="reveal">
     <div class="section-layout">
       <div class="section-kicker">
-        <h2>Expertise</h2>
-        <p>Core technical areas.</p>
+        <h2>What I Offer</h2>
+        <p>Strengths matched to engineering roles.</p>
       </div>
 
       <div class="grid">
         <article class="card">
           <span class="tag">Machine Learning</span>
-          <h3>ML, Deep Learning & Anomaly Detection</h3>
+          <h3>Build and evaluate learning-based systems</h3>
           <p class="muted">
-            Deep learning, autoencoders, computer vision, anomaly detection,
-            data imputation, representation learning, evaluation, and robust
+            Experience designing and evaluating machine-learning and deep-learning
+            methods for anomaly detection, imputation, computer vision, and robust
             intelligent systems.
           </p>
+          <ul class="evidence">
+            <li>PyTorch, Python, MATLAB, model evaluation and experimentation.</li>
+            <li>Published work using learning-based methods on real sensor data.</li>
+          </ul>
         </article>
 
         <article class="card">
-          <span class="tag">Mathematics</span>
-          <h3>Probabilistic & Statistical Modelling</h3>
+          <span class="tag">Estimation</span>
+          <h3>Reason under uncertainty</h3>
           <p class="muted">
-            Bayesian inference, state estimation, stochastic modelling, signal
-            processing, uncertainty reasoning, simulation, and quantitative
-            performance analysis.
+            Strong foundation in probabilistic modelling, Bayesian estimation,
+            signal processing, sensor fusion, and state estimation for noisy and
+            adversarial environments.
           </p>
+          <ul class="evidence">
+            <li>PhD research in robust multi-object tracking and distributed sensing.</li>
+            <li>IEEE Transactions on Signal Processing publication in robust filtering.</li>
+          </ul>
         </article>
 
         <article class="card">
-          <span class="tag">Applied Engineering</span>
-          <h3>Real-World Data & Systems</h3>
+          <span class="tag">Software & Data</span>
+          <h3>Implement research as usable software</h3>
           <p class="muted">
-            Environmental sensing, multi-sensor systems, data quality,
-            measurement reliability, real-time processing, system integration,
-            and applied engineering analytics.
+            Hands-on scientific programming and data workflows, from simulation and
+            analysis to algorithm implementation, validation, and reproducible results.
           </p>
+          <ul class="evidence">
+            <li>Python, C++, MATLAB, SQL, Linux, Docker and Git.</li>
+            <li>Experience with large annotation and tracking workflows.</li>
+          </ul>
         </article>
 
         <article class="card">
-          <span class="tag">Software</span>
-          <h3>Scientific & Engineering Computing</h3>
+          <span class="tag">Communication</span>
+          <h3>Explain complex engineering work clearly</h3>
           <p class="muted">
-            Python-based experimentation and analysis, MATLAB modelling,
-            research software, Linux workflows, Git, Docker, and implementation
-            of custom algorithms for non-standard technical problems.
+            Experience communicating technical work through peer-reviewed papers,
+            conference presentations, engineering teaching, feedback, and structured
+            technical documentation.
           </p>
+          <ul class="evidence">
+            <li>Research publications across signal processing, tracking and environmental data.</li>
+            <li>University teaching in systems engineering and robotics.</li>
+          </ul>
         </article>
       </div>
     </div>
@@ -658,8 +684,8 @@
   <section id="skills" class="reveal">
     <div class="section-layout">
       <div class="section-kicker">
-        <h2>Technical Stack</h2>
-        <p>Hands-on tools and methods.</p>
+        <h2>Technical Skills</h2>
+        <p>Relevant tools and methods.</p>
       </div>
 
       <div>
@@ -667,7 +693,7 @@
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="code">Programming</button>
           <button class="filter-btn" data-filter="ml">ML / AI</button>
-          <button class="filter-btn" data-filter="math">Math</button>
+          <button class="filter-btn" data-filter="math">Estimation / Math</button>
           <button class="filter-btn" data-filter="systems">Systems</button>
         </div>
 
@@ -675,33 +701,33 @@
           <div class="skill-row" data-category="code">
             <strong>Programming & Scientific Computing</strong>
             <p class="skills">
-              Python · C++ · MATLAB · R · SQL · NumPy · Pandas · SciPy · Matplotlib
+              Python · C++ · MATLAB · SQL · R · NumPy · Pandas · SciPy · Matplotlib
             </p>
           </div>
 
           <div class="skill-row" data-category="ml">
-            <strong>Machine Learning & AI</strong>
+            <strong>Machine Learning & Computer Vision</strong>
             <p class="skills">
-              PyTorch · Deep Learning · Autoencoders · Computer Vision ·
-              Anomaly Detection · Data Imputation · Model Evaluation
+              PyTorch · Keras · Deep Learning · Computer Vision · Anomaly Detection ·
+              Representation Learning · Data Imputation · Model Evaluation
             </p>
           </div>
 
           <div class="skill-row" data-category="math">
-            <strong>Mathematics & Quantitative Methods</strong>
+            <strong>Estimation, Tracking & Quantitative Methods</strong>
             <p class="skills">
-              Bayesian Inference · Probabilistic Modelling · State Estimation ·
-              Signal Processing · Data Assimilation · Uncertainty Modelling ·
-              Simulation
+              Bayesian Inference · Probabilistic Modelling · Kalman Filtering ·
+              Multi-Object Tracking · Sensor Fusion · Signal Processing ·
+              Data Assimilation · Simulation
             </p>
           </div>
 
           <div class="skill-row" data-category="systems">
-            <strong>Systems & Engineering</strong>
+            <strong>Systems & Robotics</strong>
             <p class="skills">
-              Distributed Systems · Multi-Sensor Systems · Sensor Fusion ·
-              Real-Time Data Processing · System Integration · Requirements &
-              Functional Analysis
+              Distributed Systems · Multi-Sensor Systems · Real-Time Processing ·
+              Systems Engineering · Functional Decomposition · Requirements Analysis ·
+              ABB RobotStudio
             </p>
           </div>
 
@@ -721,7 +747,7 @@
     <div class="section-layout">
       <div class="section-kicker">
         <h2>Experience</h2>
-        <p>Research and applied engineering.</p>
+        <p>Reverse chronological.</p>
       </div>
 
       <div class="timeline">
@@ -729,19 +755,17 @@
           <div class="time">2024 · Present</div>
           <div>
             <h3>PhD Researcher — RMIT University</h3>
-            <p class="muted">
-              Develop mathematical and computational methods for reliable
-              multi-object tracking and distributed sensing under noisy,
-              incomplete, and adversarial observations. Work combines Bayesian
-              inference, signal processing, anomaly detection, simulation,
-              scientific programming, and quantitative evaluation.
-            </p>
+            <ul class="evidence">
+              <li>Develop robust filtering and intrusion-detection methods for distributed multi-object tracking under noisy, incomplete, and adversarial measurements.</li>
+              <li>Design mathematical models, implement algorithms, run simulations, evaluate performance, and communicate results through peer-reviewed research.</li>
+              <li>Work across Bayesian estimation, anomaly detection, signal processing, distributed sensing, computer vision, Python and MATLAB.</li>
+            </ul>
             <div class="stack">
               <span class="chip">Python</span>
               <span class="chip">MATLAB</span>
+              <span class="chip">Multi-Object Tracking</span>
               <span class="chip">Bayesian Estimation</span>
               <span class="chip">Signal Processing</span>
-              <span class="chip">Distributed Systems</span>
             </div>
           </div>
         </article>
@@ -749,32 +773,27 @@
         <article class="mini-card timeline-item">
           <div class="time">2026 · Present</div>
           <div>
-            <h3>Tutor — Systems Engineering Principles</h3>
-            <p class="muted">
-              Support engineering students in structured problem formulation,
-              requirements, functional decomposition, system context, ConOps,
-              system lifecycle thinking, and translating stakeholder needs into
-              technical system definitions.
-            </p>
+            <h3>Tutor / Demonstrator — RMIT University</h3>
+            <ul class="evidence">
+              <li>Support Systems Engineering Principles through requirements analysis, functional decomposition, ConOps, traceability, and structured engineering reasoning.</li>
+              <li>Support Advanced Robotics laboratory activities using MATLAB and ABB RobotStudio.</li>
+            </ul>
           </div>
         </article>
 
         <article class="mini-card timeline-item">
-          <div class="time">South Korea</div>
+          <div class="time">Earlier Research</div>
           <div>
-            <h3>Applied Research & Engineering Projects</h3>
-            <p class="muted">
-              Worked on multidisciplinary projects involving subway indoor-air
-              quality, environmental sensing, data acquisition, databases,
-              machine learning, missing-data reconstruction, data validation,
-              prediction, and real-world monitoring systems.
-            </p>
+            <h3>Applied Research & Engineering — South Korea</h3>
+            <ul class="evidence">
+              <li>Worked on environmental sensing, subway indoor-air quality, machine learning, data validation, missing-data reconstruction, prediction, and monitoring systems.</li>
+              <li>Contributed to multidisciplinary research involving databases, real sensor measurements, data quality and research software.</li>
+            </ul>
             <div class="stack">
               <span class="chip">Real Sensor Data</span>
               <span class="chip">Machine Learning</span>
               <span class="chip">Data Quality</span>
               <span class="chip">Environmental Monitoring</span>
-              <span class="chip">Research Software</span>
             </div>
           </div>
         </article>
@@ -782,52 +801,50 @@
     </div>
   </section>
 
-  <section id="research" class="reveal">
+  <section id="work" class="reveal">
     <div class="section-layout">
       <div class="section-kicker">
         <h2>Selected Work</h2>
-        <p>Problems I have worked on.</p>
+        <p>Evidence of applied capability.</p>
       </div>
 
       <div class="grid">
         <article class="card">
-          <span class="tag">Inference</span>
-          <h3>Robust Estimation from Unreliable Measurements</h3>
+          <span class="tag">Robust Estimation</span>
+          <h3>Filtering under stealthy measurement attacks</h3>
           <p class="muted">
-            Designed methods for extracting reliable state information when
-            observations can be noisy, misleading, incomplete, or corrupted.
-            This work connects mathematical modelling, uncertainty, and robust
-            decision making.
+            Developed robust filtering methods for multi-object tracking when
+            measurements may be subtly manipulated. The work combines adversarial
+            modelling, Bayesian estimation, simulation and quantitative evaluation.
           </p>
         </article>
 
         <article class="card">
-          <span class="tag">Data Quality</span>
-          <h3>Missing-Data Reconstruction</h3>
+          <span class="tag">Intrusion Detection</span>
+          <h3>Real-time detection in distributed tracking</h3>
           <p class="muted">
-            Evaluated deep-learning approaches for reconstructing missing
-            subway environmental measurements, considering not only prediction
-            accuracy but also efficiency and downstream analytical impact.
+            Developed a real-time intrusion-detection approach for distributed
+            tracking systems without requiring offline pre-training.
           </p>
         </article>
 
         <article class="card">
-          <span class="tag">ML Systems</span>
-          <h3>Data Validation & Anomaly Detection</h3>
+          <span class="tag">Computer Vision</span>
+          <h3>Multi-camera tracking and re-identification</h3>
           <p class="muted">
-            Developed learning-based methods for identifying measurements that
-            deviate from expected behaviour in real environmental datasets,
-            with emphasis on practical data reliability.
+            Worked on large-scale multi-camera tracking annotation and correction,
+            including ID-switch correction, track decomposition, re-identification,
+            and duplicate-track resolution.
           </p>
         </article>
 
         <article class="card">
-          <span class="tag">Distributed AI</span>
-          <h3>Multi-Sensor Tracking & Cooperative Inference</h3>
+          <span class="tag">Environmental Data</span>
+          <h3>Missing-data reconstruction and validation</h3>
           <p class="muted">
-            Research on distributed multi-object tracking, sensor cooperation,
-            resilient inference, and maintaining reliable estimates across
-            networked sensing nodes.
+            Evaluated deep-learning methods for reconstructing missing environmental
+            measurements and developed learning-based methods for practical data
+            validation and anomaly detection.
           </p>
         </article>
       </div>
@@ -855,8 +872,7 @@
 
         <article class="entry">
           <p class="entry-title">
-            Real-Time Intrusion Detection of Ghost Attacks in Distributed
-            Multi-Object Tracking Without Offline Pre-Training
+            Real-Time Intrusion Detection for Distributed Tracking Systems
           </p>
           <p class="entry-meta">
             ICCAIS, 2025 ·
@@ -866,8 +882,8 @@
 
         <article class="entry">
           <p class="entry-title">
-            Evaluating Deep Learning Data Imputation for Subway Indoor Air
-            Quality: Accuracy, Efficiency, and Implications for Downstream Tasks
+            Evaluating Deep Learning Data Imputation for Subway Indoor Air Quality:
+            Accuracy, Efficiency, and Implications for Downstream Tasks
           </p>
           <p class="entry-meta">
             Building and Environment, 2025 ·
@@ -876,13 +892,8 @@
         </article>
 
         <article class="entry">
-          <p class="entry-title">
-            Validation of Subway Indoor Air Quality Data Using
-            Memory-Augmented Autoencoders with Learned Normal Prototypes
-          </p>
-          <p class="entry-meta">
-            Korean Journal of Chemical Engineering, 2025
-          </p>
+          <p class="entry-title">Data Assimilation for Agent-Based Models</p>
+          <p class="entry-meta">Mathematics, 2023</p>
         </article>
 
         <a class="publication-link" href="publications.html">View all publications</a>
@@ -894,7 +905,7 @@
     <div class="section-layout">
       <div class="section-kicker">
         <h2>Education</h2>
-        <p>Engineering and computing foundation.</p>
+        <p>Major tertiary qualifications.</p>
       </div>
 
       <div class="timeline">
@@ -929,15 +940,14 @@
     <div class="section-layout">
       <div class="section-kicker">
         <h2>Contact</h2>
-        <p>Engineering, ML, research, and technical opportunities.</p>
+        <p>Melbourne-based · open to engineering and research opportunities.</p>
       </div>
 
       <div>
         <p class="lead">
-          Interested in quantitative engineering, machine learning, scientific
-          computing, intelligent systems, and challenging applied problems.
+          Interested in research engineering, machine learning, computer vision,
+          robotics, scientific computing, and data-driven engineering roles.
         </p>
-
         <div class="hero-links">
           <a class="button primary" href="mailto:vahidg38@gmail.com">Email</a>
           <a class="button" href="https://www.linkedin.com/in/vahid-ghorbani/">LinkedIn</a>
@@ -950,7 +960,7 @@
 
   <footer>
     <div>© Vahid Ghorbani</div>
-    <div>Machine Learning · Mathematics · Systems · Engineering</div>
+    <div>Machine Learning · Computer Vision · Estimation · Engineering</div>
   </footer>
 
 </main>
