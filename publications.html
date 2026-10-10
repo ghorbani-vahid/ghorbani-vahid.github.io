@@ -1,33 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Vahid Ghorbani is a computer engineer and RMIT PhD researcher working across software development, computational simulation and university teaching in Melbourne.">
-<title>Vahid Ghorbani · Software, Simulation & Learning</title>
-<style>
-:root{--bg:#f7f6f2;--text:#222;--muted:#62676e;--card:#fff;--line:#dedbd2;--accent:#40556f;--soft:#eef2f5;--sand:#eee9df;--shadow:0 18px 45px rgba(30,35,40,.06)}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,#fbfaf7,var(--bg));line-height:1.65}a{color:var(--accent);text-underline-offset:4px}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #a47532;outline-offset:5px}.page{max-width:1160px;margin:auto;padding:24px 24px 50px}.skip{position:absolute;top:-60px;left:15px;background:white;padding:10px;z-index:5}.skip:focus{top:10px}header{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:14px 0 22px;border-bottom:1px solid var(--line)}.brand{font-size:20px;letter-spacing:-.02em;color:var(--text);text-decoration:none}nav{display:flex;flex-wrap:wrap;gap:20px;font-size:14px}nav a{text-decoration:none;color:var(--muted)}.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:60px;align-items:center;padding:75px 0 65px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}h1{margin:0 0 22px;font-family:Georgia,serif;font-weight:400;font-size:clamp(43px,5.5vw,68px);letter-spacing:-.045em;line-height:1.08}.subtitle{font-size:19px;color:var(--muted);max-width:630px;margin:0}.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.button{display:inline-flex;align-items:center;border-radius:999px;padding:10px 16px;font-size:14px;border:1px solid var(--line);background:white;text-decoration:none}.button.primary{background:var(--accent);color:white;border-color:var(--accent)}.hero-panel{background:#ffffffc7;border:1px solid var(--line);border-radius:25px;padding:28px;box-shadow:var(--shadow)}.hero-panel h2{font:400 28px/1.2 Georgia,serif;letter-spacing:-.02em;color:var(--text);text-transform:none;margin:0 0 18px}.fact{padding:14px 0;border-top:1px solid var(--line)}.fact strong{display:block;font-size:14px;font-weight:600}.fact span{font-size:13px;color:var(--muted)}section{padding:48px 0;border-top:1px solid var(--line)}.section-layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:44px}h2{margin:0 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:600}.section-kicker p{font-size:14px;color:var(--muted);margin:0}.lead{font:400 27px/1.35 Georgia,serif;letter-spacing:-.02em;margin:0 0 17px}.body-copy{color:var(--muted);font-size:15px;margin:0 0 14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.card,.entry{background:#ffffffcc;border:1px solid var(--line);border-radius:20px;padding:23px}.card h3{font:400 23px/1.2 Georgia,serif;margin:0 0 12px}.card p{font-size:14px;color:var(--muted);margin:0}.card .tools{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--accent)}.entry{margin-bottom:14px}.entry-head{display:flex;justify-content:space-between;gap:15px;align-items:baseline}.entry h3{font-size:17px;line-height:1.35;font-weight:600;margin:0}.date{font-size:12px;white-space:nowrap;color:var(--accent)}.meta{font-size:13px;color:var(--muted);margin:5px 0 14px}.entry ul{font-size:14px;color:var(--muted);padding-left:19px;margin:0}.entry li{margin:7px 0}.entry .skill{font-size:12px;color:var(--accent);border-top:1px solid var(--line);padding-top:12px;margin:15px 0 0}.education{display:grid;gap:18px}.education h3{font-size:16px;margin:0 0 4px}.education p{font-size:14px;color:var(--muted);margin:0}.publication-title{font-size:15px;line-height:1.5;margin:0 0 8px}.publication-meta{font-size:13px;color:var(--muted);margin:0}.contact{background:var(--soft);border-radius:20px;padding:26px}.contact .lead{font-size:25px}.contact a{overflow-wrap:anywhere}.note{font-size:13px;color:var(--muted);margin:15px 0 0}footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px;color:var(--muted);font-size:12px}@media(max-width:850px){.hero{gap:28px}.section-layout{grid-template-columns:165px 1fr;gap:25px}.hero-panel{padding:23px}nav{gap:12px}.subtitle{font-size:17px}}@media(max-width:650px){.page{padding:18px}header{align-items:flex-start;flex-direction:column;gap:14px}.hero{grid-template-columns:1fr;padding:43px 0;gap:30px}h1{font-size:45px}.section-layout,.grid{grid-template-columns:1fr;gap:22px}section{padding:34px 0}.entry-head{display:block}.date{display:block;margin-top:5px}.lead{font-size:25px}.button{font-size:13px}nav{font-size:13px}.hero-panel h2{font-size:26px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{nav,.links,.skip{display:none}.hero{padding:25px 0}body{background:white}.page{padding:0}.card,.entry,.hero-panel{box-shadow:none;break-inside:avoid}section{padding:25px 0}a{color:inherit}}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications · Vahid Ghorbani</title>
+  <style>
+:root {
+  --bg: #f7f6f2;
+  --text: #222222;
+  --muted: #666a70;
+  --card: #ffffff;
+  --line: #dedbd2;
+  --accent: #40556f;
+  --accent-soft: #eef2f5;
+  --sand: #eee9df;
+  --shadow: 0 18px 45px rgba(30, 35, 40, 0.07);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fbfaf7 0%, var(--bg) 100%);
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+.page { max-width: 1160px; margin: 0 auto; padding: 24px 22px 64px; }
+header {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding: 14px 0 22px; border-bottom: 1px solid var(--line);
+}
+.brand { font-size: 20px; letter-spacing: -0.02em; }
+nav { display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; color: var(--muted); }
+nav a { padding: 6px 0; border-bottom: 1px solid transparent; }
+nav a:hover { border-bottom-color: var(--accent); }
+
+.hero {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) 390px;
+  gap: 34px;
+  align-items: center;
+  padding: 58px 0 44px;
+}
+.hero-photo-wrap {
+  align-self: center;
+  justify-self: start;
+}
+.profile-photo {
+  width: 185px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 36px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: white;
+}
+.eyebrow {
+  display: inline-block; padding: 7px 11px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); font-size: 13px; margin-bottom: 22px;
+}
+h1 {
+  max-width: 780px; margin: 0 0 20px; font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6.4vw, 78px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 400;
+}
+.subtitle { max-width: 650px; margin: 0; font-size: clamp(18px, 2vw, 23px); color: var(--muted); }
+.hero-panel {
+  background: rgba(255, 255, 255, 0.78); border: 1px solid var(--line);
+  border-radius: 28px; padding: 28px; box-shadow: var(--shadow);
+}
+.panel-title { color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; margin-bottom: 16px; }
+.panel-main { font-family: Georgia, "Times New Roman", serif; font-size: 29px; line-height: 1.25; margin: 0 0 14px; font-weight: 400; }
+.panel-note { color: var(--muted); margin: 0; }
+.quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.button {
+  display: inline-flex; align-items: center; border-radius: 999px; padding: 10px 14px;
+  font-size: 14px; border: 1px solid var(--line); background: white;
+}
+.button.primary { background: var(--accent); color: white; border-color: var(--accent); }
+
+section { padding: 52px 0; border-top: 1px solid var(--line); }
+.section-layout { display: grid; grid-template-columns: 220px 1fr; gap: 42px; }
+h2 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); font-weight: 500; }
+.section-kicker p { margin: 0; color: var(--muted); font-size: 14px; }
+.lead { margin: 0 0 16px; max-width: 760px; font-family: Georgia, "Times New Roman", serif; font-size: 27px; line-height: 1.3; font-weight: 400; letter-spacing: -0.02em; }
+.muted { color: var(--muted); }
+p { margin-top: 0; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.card, .entry, .mini-card, .hobby-card {
+  background: rgba(255, 255, 255, 0.82); border: 1px solid var(--line);
+  border-radius: 22px; padding: 22px; box-shadow: 0 12px 30px rgba(30, 35, 40, 0.045);
+}
+.tag { display: inline-block; background: var(--sand); color: var(--accent); border-radius: 999px; padding: 5px 10px; font-size: 12px; margin-bottom: 14px; }
+h3 { margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: 23px; line-height: 1.2; font-weight: 400; }
+.entry { margin-bottom: 14px; }
+.entry-title { margin: 0 0 6px; font-size: 18px; line-height: 1.35; }
+.entry-meta { margin: 0; color: var(--muted); font-size: 14px; }
+.publication-link { display: inline-flex; margin-top: 8px; color: white; background: var(--accent); border-radius: 999px; padding: 11px 15px; font-size: 14px; }
+.timeline { display: grid; gap: 14px; }
+.timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: start; }
+.time { color: var(--accent); }
+.hobbies { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+.cert-image {
+  width: 100%; margin-top: 16px; border-radius: 18px; border: 1px solid var(--line);
+  object-fit: cover; box-shadow: 0 10px 25px rgba(30, 35, 40, 0.05);
+}
+.cert-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cert-card { background: rgba(255,255,255,0.84); border: 1px solid var(--line); border-radius: 22px; padding: 20px; }
+.skills { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
+footer {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  padding-top: 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px;
+}
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 160px 1fr; }
+  .hero-panel { grid-column: 1 / -1; }
+  .profile-photo { width: 155px; height: 155px; }
+}
+@media (max-width: 720px) {
+  header, .hero, .section-layout, .grid, .timeline-item, .hobbies, .cert-grid { grid-template-columns: 1fr; }
+  header { align-items: flex-start; flex-direction: column; }
+  .hero { min-height: auto; padding-top: 36px; }
+  .hero-photo-wrap { justify-self: start; }
+  .page { padding-inline: 18px; }
+}
 </style>
 </head>
-<body><a class="skip" href="#content">Skip to content</a><div class="page">
-<header><a class="brand" href="index.html">Vahid Ghorbani</a><nav aria-label="Main navigation"><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="certificates.html">Certificates</a><a href="#contact">Contact</a></nav></header>
-<main id="content">
-<div class="hero"><div><p class="eyebrow">Computer engineer · Researcher · Melbourne</p><h1>Software grounded<br>in rigorous thinking<br>and practical learning.</h1><p class="subtitle">I bring computational modelling, programming and university teaching experience to building reliable software and making complex ideas easier to understand.</p><div class="links"><a class="button primary" href="#experience">Explore my experience</a><a class="button" href="https://www.linkedin.com/in/vahid-ghorbani">LinkedIn</a><a class="button" href="https://github.com/ghorbani-vahid">GitHub</a></div></div><aside class="hero-panel" aria-label="Professional background"><h2>Technical depth.<br>Academic collaboration.</h2><div class="fact"><strong>RMIT University</strong><span>PhD researcher in the final stages of my degree; current casual staff member.</span></div><div class="fact"><strong>Computer engineering background</strong><span>B.Sc. in Computer Engineering (IT) and Master of Engineering in Integrated Engineering.</span></div><div class="fact"><strong>Teaching and student support</strong><span>Systems Engineering project assessment and Advanced Robotics laboratory demonstrating.</span></div><div class="fact"><strong>Ready to commence</strong><span>Based in Melbourne with flexible availability for casual work.</span></div></aside></div>
-<section id="about"><div class="section-layout"><div class="section-kicker"><h2>About</h2><p>Connecting software, evidence and learning.</p></div><div><p class="lead">I work at the intersection of computational software and academic practice.</p><p class="body-copy">My research at RMIT involves translating mathematical models into working simulations, evaluating their performance and documenting the results. Alongside this work, I teach and assess student projects, coordinate feedback with academic teams and help learners troubleshoot practical software tasks.</p><p class="body-copy">I am interested in applying this combination to interactive web applications and educational tools: clear interfaces supported by dependable calculations, useful feedback and a practical understanding of how people learn.</p></div></div></section>
-<section id="expertise"><div class="section-layout"><div class="section-kicker"><h2>Expertise</h2><p>Capabilities supported by project and professional experience.</p></div><div class="grid"><article class="card"><h3>Web development</h3><p>Practical website development through an undergraduate real-estate project and maintenance of my public professional website. Interested in interfaces that make tasks and information clear.</p><p class="tools">JavaScript · HTML · CSS · PHP</p></article><article class="card"><h3>Models into software</h3><p>Translate mathematical rules and algorithms into numerical workflows for tracking, estimation and anomaly detection. Experience handling data, simulation state and reproducible experiments.</p><p class="tools">Python · MATLAB · C++ · SQL</p></article><article class="card"><h3>Verification and debugging</h3><p>Compare software outputs with reference baselines, evaluate performance and investigate errors. Practical experience troubleshooting software and correcting complex tracking datasets.</p><p class="tools">Benchmarking · Error diagnosis · Data quality</p></article><article class="card"><h3>Teaching and collaboration</h3><p>Explain technical concepts, support practical activities and provide actionable feedback. Work with course coordinators and teaching teams to maintain consistency across project assessment.</p><p class="tools">Academic collaboration · Student support · Documentation</p></article></div></div></section>
-<section id="experience"><div class="section-layout"><div class="section-kicker"><h2>Experience</h2><p>Research, teaching and practical software support.</p></div><div>
-<article class="entry"><div class="entry-head"><h3>PhD Researcher</h3><span class="date">2024–Present</span></div><p class="meta">RMIT University · School of Engineering</p><ul><li>Implement mathematical models in Python and MATLAB for robust tracking, estimation and intrusion detection.</li><li>Design experiments, compare algorithms against reference methods and evaluate reliability and computational performance.</li><li>Document implementation methods and results, with first-author research in IEEE Transactions on Signal Processing.</li></ul><p class="skill">Applied skills: rule implementation, numerical debugging, reproducible evaluation and technical communication.</p></article>
-<article class="entry"><div class="entry-head"><h3>Tutor and Project Assessor, Systems Engineering</h3><span class="date">2026–Present</span></div><p class="meta">RMIT University · MIET2385</p><ul><li>Contribute teaching and assessment support to a course with 1,700+ students; assessed 100+ group projects.</li><li>Explain course concepts through practical project examples and provide feedback on requirements, traceability and verification.</li><li>Coordinate marking and feedback with the teaching team to support consistent assessment.</li></ul><p class="skill">Applied skills: academic collaboration, clear instruction, assessment consistency and constructive feedback.</p></article>
-<article class="entry"><div class="entry-head"><h3>Laboratory Demonstrator, Advanced Robotics</h3><span class="date">2026–Present</span></div><p class="meta">RMIT University · MANU2869</p><ul><li>Support MATLAB and ABB RobotStudio laboratory activities.</li><li>Help students troubleshoot exercises, interpret results and understand software workflows.</li></ul><p class="skill">Applied skills: practical debugging, user support and explaining technical processes.</p></article>
-<article class="entry"><div class="entry-head"><h3>Casual Researcher, Multi-Camera Computer Vision</h3><span class="date">2026–Present</span></div><p class="meta">RMIT University</p><ul><li>Inspect tracking datasets and correct identity switches, fragmented tracks and duplicate records.</li><li>Maintain clear progress records and deliver corrected annotations to the research team.</li></ul><p class="skill">Applied skills: systematic error diagnosis, quality assurance and progress reporting.</p></article>
-<article class="entry"><div class="entry-head"><h3>Graduate Researcher and Teaching Support</h3><span class="date">2022–2023</span></div><p class="meta">EMSEL Laboratory · Kyung Hee University, South Korea</p><ul><li>Develop sensor-data validation and reconstruction workflows, supported by database preparation and experimental evaluation.</li><li>Teach practical Deep Learning in Python summer courses and support Big Data Applications tutorials and assessment.</li></ul><p class="skill">Applied skills: data processing, algorithm evaluation, practical instruction and documentation.</p></article>
-</div></div></section>
-<section id="education"><div class="section-layout"><div class="section-kicker"><h2>Education</h2><p>A foundation in computing and engineering.</p></div><div class="education"><div><h3>PhD in Engineering · Final stages</h3><p>RMIT University, Melbourne · 2024–Present</p><p>Robust filtering, distributed tracking and reliable sensing systems.</p></div><div><h3>Master of Engineering, Integrated Engineering</h3><p>Kyung Hee University, South Korea · 2022–2023</p><p>Advanced study in machine learning, deep learning and big-data applications. Qualification verified by CVCheck.</p></div><div><h3>B.Sc. Computer Engineering (Information Technology)</h3><p>Amirkabir University of Technology, Iran</p><p>Final-year project: real-time licence-plate recognition for a smart-parking system.</p></div></div></div></section>
-<section id="publications"><div class="section-layout"><div class="section-kicker"><h2>Publications</h2><p>Research in reliable algorithms, simulation and data analysis.</p></div><div>
-<article class="entry"><h3 class="publication-title">Robust Filtering for Multi-Object Tracking Against Stealthy Measurement-Oriented Adversarial Attacks</h3><p class="publication-meta">IEEE Transactions on Signal Processing, 2026 · <a href="https://doi.org/10.1109/TSP.2026.3697369">Read publication</a></p></article>
-<article class="entry"><h3 class="publication-title">Real-Time Intrusion Detection of Ghost Attacks in Distributed Multi-Object Tracking Without Offline Pre-Training</h3><p class="publication-meta">ICCAIS, 2025 · <a href="https://doi.org/10.1109/ICCAIS67508.2025.11262123">Read publication</a></p></article>
-<article class="entry"><h3 class="publication-title">Evaluating Deep Learning Data Imputation for Subway Indoor Air Quality: Accuracy, Efficiency, and Implications for Downstream Tasks</h3><p class="publication-meta">Building and Environment, 2025 · <a href="https://doi.org/10.1016/j.buildenv.2025.113713">Read publication</a></p></article>
-<article class="entry"><h3 class="publication-title">Validation of Subway Indoor Air Quality Data Using Memory-Augmented Autoencoders with Learned Normal Prototypes</h3><p class="publication-meta">Korean Journal of Chemical Engineering, 2025 · <a href="https://doi.org/10.1007/s11814-025-00451-y">Read publication</a></p></article>
-<article class="entry"><h3 class="publication-title">Data Assimilation for Agent-Based Models</h3><p class="publication-meta">Mathematics, 2023 · <a href="https://doi.org/10.3390/math11204296">Read publication</a></p></article>
-</div></div></section>
-<section id="contact"><div class="section-layout"><div class="section-kicker"><h2>Contact</h2><p>Melbourne, Australia.</p></div><div class="contact"><p class="lead">Interested in software, simulation or educational technology?</p><p class="body-copy">I welcome conversations about development work and collaborative projects that connect technical problems with practical outcomes.</p><a href="mailto:vahid.ghorbani@rmit.edu.au">vahid.ghorbani@rmit.edu.au</a><div class="links"><a class="button" href="https://www.linkedin.com/in/vahid-ghorbani">LinkedIn</a><a class="button" href="https://github.com/ghorbani-vahid">GitHub</a></div><p class="note">Current RMIT casual staff member with a Working with Children Check.</p></div></div></section>
-</main><footer><span>© Vahid Ghorbani</span><span>Personal professional website</span></footer></div></body></html>
+<body>
+  <main class="page">
+    <header>
+      <a class="brand" href="index.html">Vahid Ghorbani</a>
+      <nav><a href="index.html">Home</a><a href="certificates.html">Certificates</a><a href="index.html#contact">Contact</a></nav>
+    </header>
+
+    <section>
+      <div class="section-layout">
+        <div class="section-kicker"><h2>All Publications</h2><p>Peer-reviewed and selected works.</p></div>
+        <div>
+          <article class="entry"><p class="entry-title">Robust Filtering for Multi-Object Tracking Against Stealthy Measurement-Oriented Adversarial Attacks</p><p class="entry-meta">IEEE Transactions on Signal Processing, 2026 · <a href="https://doi.org/10.1109/TSP.2026.3697369">DOI</a></p></article>
+          <article class="entry"><p class="entry-title">Real-Time Intrusion Detection of Ghost Attacks in Distributed Multi-Object Tracking Without Offline Pre-Training</p><p class="entry-meta"> 14th International Conference on Control, Automation and Information Sciences (ICCAIS), 2025 · <a href="https://doi.org/10.1109/ICCAIS67508.2025.11262123">DOI</a></p></article>
+          <article class="entry"><p class="entry-title">Evaluating Deep Learning Data Imputation for Subway Indoor Air Quality: Accuracy, Efficiency, and Implications for Downstream Tasks</p><p class="entry-meta">Building and Environment, 2025 · <a href="https://doi.org/10.1016/j.buildenv.2025.113713">DOI</a></p></article>
+          <article class="entry"><p class="entry-title">Validation of Subway Indoor Air Quality Data Using Memory-Augmented Autoencoders with Learned Normal Prototypes</p><p class="entry-meta">Korean Journal of Chemical Engineering, 2025 · <a href="https://doi.org/10.1007/s11814-025-00451-y">DOI</a></p></article>
+          <article class="entry"><p class="entry-title">Data Assimilation for Agent-Based Models</p><p class="entry-meta">Mathematics, 2023 · <a href="https://doi.org/10.3390/math11204296">DOI</a></p></article>
+          <a class="publication-link" href="index.html">Back to homepage</a>
+        </div>
+      </div>
+    </section>
+
+    <footer><div>© Vahid Ghorbani</div><div>Publications</div></footer>
+  </main>
+</body>
+</html>
